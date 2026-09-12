@@ -311,10 +311,11 @@
     }).catch(function () {});
 
     var btn = document.getElementById('wl-submit');
-    btn.textContent = 'Thank you for submitting';
+    btn.textContent = 'Thank you for submitting 🥳';
     btn.disabled = true;
     btn.classList.remove('btn-ondark-solid');
     btn.classList.add('btn-submitted');
+    e.target.reset();
     return false;
   }
 </script>
