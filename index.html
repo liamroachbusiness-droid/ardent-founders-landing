@@ -66,6 +66,8 @@
   .btn-ondark-outline:hover { background: rgba(255,255,255,0.1); color: #FFFFFF; }
   .btn-solid { background: var(--accent); color: #FFFFFF; }
   .btn-solid:hover { background: var(--accent-dark); color: #FFFFFF; }
+  .btn-submitted { background: var(--accent); color: #FFFFFF; border: 2px solid #FFFFFF; cursor: default; }
+  .btn-submitted:hover { background: var(--accent); }
 
   .stat-num {
     font-weight: 500;
@@ -269,7 +271,7 @@
           <label for="wl-company" class="field-label">Company</label>
           <input id="wl-company" type="text" required class="field-input">
         </div>
-        <button type="submit" class="btn btn-ondark-solid" style="width:100%; margin-top:22px;">Join the Waitlist</button>
+        <button id="wl-submit" type="submit" class="btn btn-ondark-solid" style="width:100%; margin-top:22px;">Join the Waitlist</button>
         <p style="margin:14px 0 0; font-size:13px; color:rgba(255,255,255,0.6); text-align:center;">We'll log your details and follow up by email.</p>
       </form>
     </div>
@@ -308,10 +310,11 @@
       body: params
     }).catch(function () {});
 
-    var body = ['Name: ' + name, 'Phone: ' + phone, 'Email: ' + email, 'Company: ' + company].join('\n');
-    var subject = 'Founder waitlist: ' + (company || 'new signup');
-    var mailUrl = 'mailto:ardenteducationsupport@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    window.location.href = mailUrl;
+    var btn = document.getElementById('wl-submit');
+    btn.textContent = 'Thank you for submitting';
+    btn.disabled = true;
+    btn.classList.remove('btn-ondark-solid');
+    btn.classList.add('btn-submitted');
     return false;
   }
 </script>
