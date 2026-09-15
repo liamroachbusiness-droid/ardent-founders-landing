@@ -70,15 +70,18 @@
   .btn-submitted:hover { background: var(--accent); }
 
   .stat-num {
-    font-weight: 500;
-    line-height: 1;
-    font-size: 88px;
+    font-family: "IBM Plex Sans", ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    line-height: 0.92;
+    font-size: 132px;
+    letter-spacing: -0.03em;
     font-variant-numeric: tabular-nums;
     color: var(--accent);
   }
   .stat-num.on-ink { color: var(--paper); }
-  .stat-sentence { font-weight: 700; font-size: 26px; line-height: 1.3; margin: 0; }
-  .stat-tagline { margin-top: 14px; font-size: 17px; line-height: 1.4; }
+  .stat-num.compact { font-size: 88px; }
+  .stat-sentence { font-weight: 600; font-size: 22px; line-height: 1.35; margin: 0; }
+  .stat-tagline { margin-top: 14px; font-size: 16px; line-height: 1.45; }
 
   .step-num { font-size: 15px; font-weight: 700; color: var(--accent); margin: 0 0 8px; }
 
@@ -101,13 +104,14 @@
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,241,245,0.8);
     margin-bottom: 6px;
   }
 
   @media (max-width: 680px) {
     .grid-2, .grid-3, .grid-2-form { grid-template-columns: 1fr; gap: 28px; }
-    .stat-num { font-size: 52px; }
+    .stat-num { font-size: 68px; letter-spacing: -0.01em; }
+    .stat-num.compact { font-size: 48px; }
     h1.hero-h1 { font-size: 34px !important; }
     blockquote.pull-quote { font-size: 22px !important; }
   }
@@ -133,7 +137,7 @@
     <div style="background:#FFFFFF; border-radius:14px; max-width:400px; width:100%; padding:40px 32px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.3);">
       <img src="ardent-logo-final.png" alt="Ardent" style="height:22px; width:auto; display:block; margin:0 auto 20px;">
       <h2 class="serif" style="font-weight:600; font-size:24px; margin:0;">Who&rsquo;s joining us?</h2>
-      <p style="margin:10px 0 0; font-size:15px; line-height:1.5; color:#5B4F4F;">Tell us which side of Ardent you&rsquo;re here for.</p>
+      <p style="margin:10px 0 0; font-size:15px; line-height:1.5; color:rgba(36,20,20,0.72);">Tell us which side of Ardent you&rsquo;re here for.</p>
       <div style="display:flex; flex-direction:column; gap:12px; margin-top:28px;">
         <button type="button" onclick="chooseAudience('student')" class="btn btn-solid" style="width:100%;">I&rsquo;m a Student</button>
         <button type="button" onclick="chooseAudience('founder')" class="btn" style="width:100%; background:var(--paper); color:var(--accent-dark);">I&rsquo;m a Founder</button>
@@ -147,7 +151,7 @@
       <h1 class="serif hero-h1" style="font-weight:600; font-size:46px; line-height:1.08; margin:0;">
         Your best work already exists.<br>You just haven't had anywhere to <em style="font-style:italic; color:var(--accent-bright);">prove it</em>.
       </h1>
-      <p style="margin:24px auto 0; max-width:440px; font-size:18px; line-height:1.6; color:rgba(255,255,255,0.8);">
+      <p style="margin:24px auto 0; max-width:440px; font-size:18px; line-height:1.6; color:rgba(255,241,245,0.85);">
         A CV is a claim, not evidence, and every other applicant is making the same one. Ardent gives you a real business challenge from a real founder, so your output speaks before your resume ever gets read.
       </p>
     </div>
@@ -157,11 +161,11 @@
   <section style="background:var(--paper);">
     <div class="wrap grid-2" style="padding-top:88px; padding-bottom:88px;">
       <div style="text-align:center;">
-        <div class="serif stat-num">2.0&times;</div>
+        <div class="stat-num">75%</div>
       </div>
       <div style="text-align:center;">
-        <p class="serif stat-sentence">is what founders pay to replace a junior hire who wasn't right for the role.</p>
-        <p class="stat-tagline" style="color:var(--accent-dark);">That's the same CV screen standing between you and a job you're actually capable of doing.</p>
+        <p class="serif stat-sentence">of graduate applications never reach a human, filtered out by automated screening first.</p>
+        <p class="stat-tagline" style="color:var(--accent-dark);">That screen has no idea what you're capable of. Ardent puts your work in front of the person hiring before it gets the chance to filter you out.</p>
       </div>
     </div>
   </section>
@@ -170,19 +174,18 @@
   <section style="background:var(--ink); color:#FFFFFF; position:relative; overflow:hidden;">
     <svg viewBox="0 0 1200 400" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; z-index:0;">
       <line x1="0" y1="370" x2="1200" y2="370" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"></line>
-      <path d="M -20 200 C 20 195, 40 192, 60 189 C 110 195, 170 208, 220 216 C 270 220, 330 224, 380 227 C 420 229, 460 231, 500 233 C 540 210, 570 150, 620 128 C 660 160, 700 210, 740 237 C 780 245, 820 250, 860 255 C 890 249, 910 243, 940 236 C 970 220, 990 205, 1020 192 C 1050 160, 1075 120, 1100 94 L 1220 78 L 1220 400 L -20 400 Z" fill="var(--accent-bright)" fill-opacity="0.12"></path>
-      <path d="M -20 200 C 20 195, 40 192, 60 189 C 110 195, 170 208, 220 216 C 270 220, 330 224, 380 227 C 420 229, 460 231, 500 233 C 540 210, 570 150, 620 128 C 660 160, 700 210, 740 237 C 780 245, 820 250, 860 255 C 890 249, 910 243, 940 236 C 970 220, 990 205, 1020 192 C 1050 160, 1075 120, 1100 94 L 1220 78" fill="none" stroke="var(--accent-bright)" stroke-opacity="0.6" stroke-width="3"></path>
-      <circle cx="620" cy="128" r="4" fill="var(--accent-bright)" fill-opacity="0.4"></circle>
-      <circle cx="1100" cy="94" r="14" fill="none" stroke="var(--accent-bright)" stroke-opacity="0.35" stroke-width="2"></circle>
-      <circle cx="1100" cy="94" r="6" fill="var(--accent-bright)"></circle>
+      <path d="M -20 330 C 200 325, 400 320, 600 310 C 750 305, 850 295, 950 270 C 1020 240, 1080 180, 1130 100 L 1220 70 L 1220 400 L -20 400 Z" fill="var(--accent-bright)" fill-opacity="0.14"></path>
+      <path d="M -20 330 C 200 325, 400 320, 600 310 C 750 305, 850 295, 950 270 C 1020 240, 1080 180, 1130 100 L 1220 70" fill="none" stroke="var(--accent-bright)" stroke-opacity="0.65" stroke-width="4"></path>
+      <circle cx="1130" cy="100" r="14" fill="none" stroke="var(--accent-bright)" stroke-opacity="0.35" stroke-width="2"></circle>
+      <circle cx="1130" cy="100" r="6" fill="var(--accent-bright)"></circle>
     </svg>
     <div class="wrap grid-2" style="position:relative; z-index:1; padding-top:88px; padding-bottom:88px;">
       <div style="text-align:center;">
         <p class="serif stat-sentence">is how much youth unemployment has risen over the past decade.</p>
-        <p class="stat-tagline" style="color:rgba(255,255,255,0.7);">You're not imagining it. Getting a fair shot has gotten harder, not because the talent disappeared.</p>
+        <p class="stat-tagline" style="color:rgba(255,241,245,0.75);">You're not imagining it. Getting a fair shot has gotten harder, not because the talent disappeared.</p>
       </div>
       <div style="text-align:center;">
-        <div class="serif stat-num on-ink">21%</div>
+        <div class="stat-num on-ink" style="transform:translate(-50px, -50px);">21%</div>
       </div>
     </div>
   </section>
@@ -191,11 +194,11 @@
   <section style="background:var(--paper);">
     <div class="wrap grid-2" style="padding-top:88px; padding-bottom:88px;">
       <div style="text-align:center;">
-        <div class="serif stat-num">~3 months</div>
+        <div class="stat-num compact">5 months</div>
       </div>
       <div style="text-align:center;">
-        <p class="serif stat-sentence">is the average time a founder spends filling one junior role.</p>
-        <p class="stat-tagline" style="color:var(--accent-dark);">Time they'd rather spend looking at your actual work than your CV.</p>
+        <p class="serif stat-sentence">is how long the average graduate job search takes.</p>
+        <p class="stat-tagline" style="color:var(--accent-dark);">Most of that time spent waiting to hear back, not proving what you can actually do.</p>
       </div>
     </div>
   </section>
@@ -204,14 +207,14 @@
   <section style="background:#FFFFFF;">
     <div class="narrow" style="padding-top:88px; padding-bottom:56px; text-align:center;">
       <h2 class="serif" style="font-weight:600; font-size:32px; margin:0;">Your CV was never going to be enough.</h2>
-      <p style="margin:16px 0 0; font-size:17px; line-height:1.65; color:#4A4040;">
+      <p style="margin:16px 0 0; font-size:17px; line-height:1.65; color:rgba(36,20,20,0.8);">
         For years, breaking in has been treated as a credentials problem: the right university, the right GPA, the right internship name on a page. The traits that actually predict a great junior hire are a portfolio of real work and the ability to diagnose an actual business problem. Neither one shows up on a CV, no matter how well it's formatted.
       </p>
     </div>
 
     <div class="narrow" style="padding-top:40px; padding-bottom:88px; text-align:center;">
       <h2 class="serif" style="font-weight:600; font-size:26px; margin:0;">A CV was never the whole story.</h2>
-      <p style="margin:14px 0 0; font-size:17px; line-height:1.65; color:#4A4040;">
+      <p style="margin:14px 0 0; font-size:17px; line-height:1.65; color:rgba(36,20,20,0.8);">
         Everyone applying for the same role can list a similar degree and similar bullet points. A CV is a claim about what you could do, and until now you've never had anywhere to prove it. Ardent replaces that claim with something a founder can actually check: real, completed work, reviewed by the company that assigned it.
       </p>
     </div>
@@ -222,7 +225,7 @@
     <div class="wrap" style="padding-top:72px; padding-bottom:72px; text-align:center;">
       <blockquote class="serif pull-quote" style="margin:0 auto; max-width:640px; font-weight:700; font-style:italic; font-size:30px; line-height:1.35; color:var(--accent-dark);">
         &ldquo;A portfolio of real work says more in five minutes than a CV says in five interviews.&rdquo;
-        <footer style="margin-top:18px; font-family:'IBM Plex Sans',sans-serif; font-style:normal; font-weight:400; font-size:14px; color:#8A7D7D;">
+        <footer style="margin-top:18px; font-family:'IBM Plex Sans',sans-serif; font-style:normal; font-weight:400; font-size:14px; color:rgba(36,20,20,0.55);">
           A pattern founders consistently report when hiring junior talent.
         </footer>
       </blockquote>
@@ -233,7 +236,7 @@
   <section style="background:var(--ink); color:#FFFFFF; text-align:center;">
     <div class="narrow" style="padding-top:80px; padding-bottom:80px;">
       <h2 class="serif" style="font-weight:600; font-size:32px; margin:0;">Without proof of work, you're just another CV in the pile.</h2>
-      <p style="margin:16px 0 0; font-size:17px; line-height:1.65; color:rgba(255,255,255,0.75);">
+      <p style="margin:16px 0 0; font-size:17px; line-height:1.65; color:rgba(255,241,245,0.82);">
         A polished CV and a confident interview don't show a founder whether you can actually do the job, they just wallpaper over the same uncertainty every other applicant has too. Most students spend months applying into a black hole, and even a strong candidate can get filtered out before anyone reads the details. Ardent gives you a real problem to solve and a direct line to the person hiring.
       </p>
     </div>
@@ -246,15 +249,15 @@
       <div class="grid-3" style="margin-top:48px;">
         <div>
           <p class="step-num">01: Real challenge</p>
-          <p style="margin:0; font-size:15.5px; line-height:1.55; color:#4A4040;">Take on an actual business problem a founder needs solved, whether that's marketing, finance, strategy, or product.</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.55; color:rgba(36,20,20,0.8);">Take on an actual business problem a founder needs solved, whether that's marketing, finance, strategy, or product.</p>
         </div>
         <div>
           <p class="step-num">02: Verified work</p>
-          <p style="margin:0; font-size:15.5px; line-height:1.55; color:#4A4040;">Ardent reviews every submission and recommends only the strongest responses to the founder, forming the start of a valuable relationship.</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.55; color:rgba(36,20,20,0.8);">Ardent reviews every submission and recommends only the strongest responses to the founder, forming the start of a valuable relationship.</p>
         </div>
         <div>
           <p class="step-num">03: Direct access</p>
-          <p style="margin:0; font-size:15.5px; line-height:1.55; color:#4A4040;">Your output reaches the founder first, before a CV, before a cover letter, before the interview.</p>
+          <p style="margin:0; font-size:15.5px; line-height:1.55; color:rgba(36,20,20,0.8);">Your output reaches the founder first, before a CV, before a cover letter, before the interview.</p>
         </div>
       </div>
     </div>
@@ -264,7 +267,7 @@
   <section id="waitlist" style="background:var(--accent-dark); color:#FFFFFF; text-align:center; scroll-margin-top:88px;">
     <div class="narrow" style="padding-top:80px; padding-bottom:80px;">
       <h2 class="serif" style="font-weight:600; font-size:34px; margin:0;">Join the student waitlist.</h2>
-      <p style="margin:14px 0 0; font-size:17px; color:rgba(255,255,255,0.82); max-width:480px; margin-left:auto; margin-right:auto;">We're opening up real challenges from founders looking for exceptional junior talent. Tell us about yourself and we'll be in touch.</p>
+      <p style="margin:14px 0 0; font-size:17px; color:rgba(255,241,245,0.85); max-width:480px; margin-left:auto; margin-right:auto;">We're opening up real challenges from founders looking for exceptional junior talent. Tell us about yourself and we'll be in touch.</p>
 
       <form onsubmit="submitWaitlist(event)" style="margin-top:36px; text-align:left; max-width:480px; margin-left:auto; margin-right:auto;">
         <div class="grid-2-form">
@@ -286,7 +289,7 @@
           <input id="wl-school" type="text" required class="field-input">
         </div>
         <button id="wl-submit" type="submit" class="btn btn-ondark-solid" style="width:100%; margin-top:22px;">Join the Waitlist</button>
-        <p style="margin:14px 0 0; font-size:13px; color:rgba(255,255,255,0.6); text-align:center;">We'll log your details and follow up by email.</p>
+        <p style="margin:14px 0 0; font-size:13px; color:rgba(255,241,245,0.65); text-align:center;">We'll log your details and follow up by email.</p>
       </form>
     </div>
   </section>
@@ -296,7 +299,7 @@
     <div class="narrow" style="padding-top:56px; padding-bottom:56px; text-align:center;">
       <img src="ardent-logo-final.png" alt="Ardent" style="height:28px; width:auto; display:block; margin:0 auto;">
       <p class="serif" style="margin:22px 0 0; font-size:22px; font-weight:600; color:#241414; max-width:34ch; margin-left:auto; margin-right:auto;">Giving students and founders the opportunity for rapid growth.</p>
-      <p style="margin:16px 0 0; font-size:14px; font-weight:500; color:#5B4F4F;">If you have any questions, email ardenteducationsupport@gmail.com</p>
+      <p style="margin:16px 0 0; font-size:14px; font-weight:500; color:rgba(36,20,20,0.72);">If you have any questions, email ardenteducationsupport@gmail.com</p>
     </div>
   </footer>
 
